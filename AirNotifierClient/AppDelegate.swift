@@ -12,13 +12,45 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    func initializeNotificationServices() -> Void {
+        print("Requesting permission for push notifications..."); // iOS 8
 
+        let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        
+        // This is an asynchronous method to retrieve a Device Token
+        // Callbacks are in AppDelegate.swift
+        // Success = didRegisterForRemoteNotificationsWithDeviceToken
+        // Fail = didFailToRegisterForRemoteNotificationsWithError
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
+    
+    func application(app: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        initializeNotificationServices()
         return true
     }
 
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let deviceTokenStr = convertDeviceTokenToString(deviceToken)
+        print( "Token: \(deviceTokenStr) " )
+        let bundleId = NSBundle.mainBundle().bundleIdentifier;
+        print( "bundleIdentifier: \(bundleId) " )
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(deviceTokenStr, forKey: "token")
+    }
+    
+    func convertDeviceTokenToString(token: NSData) -> NSString {
+        let characterSet: NSCharacterSet = NSCharacterSet( charactersInString: "<>" )
+        
+        let deviceTokenString: String = ( token.description as NSString )
+            .stringByTrimmingCharactersInSet( characterSet )
+            .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
+        return deviceTokenString
+    }
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        // inspect notificationSettings to see what the user said!
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
