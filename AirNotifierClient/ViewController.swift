@@ -16,9 +16,11 @@ class ViewController: UIViewController {
 
         let btn = UIButton(type: UIButtonType.System) as UIButton
         btn.setTitle("Get device token ", forState: UIControlState.Normal)
-        btn.backgroundColor = UIColor.greenColor()
+        btn.backgroundColor = UIColor.grayColor()
         btn.addTarget(self, action: "clickMe:", forControlEvents: UIControlEvents.TouchUpInside)
-        btn.frame = CGRectMake(0, 100, screenSize.width, 100)
+        btn.titleLabel?.font =  UIFont(name: "Palatino", size: 32)
+        btn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        btn.frame = CGRectMake(0, 300, screenSize.width, 100)
         self.view.addSubview(btn)
     }
 
