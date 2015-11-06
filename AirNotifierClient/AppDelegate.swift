@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initializeNotificationServices() -> Void {
         print("Requesting permission for push notifications..."); // iOS 8
 
-        let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
-
+        let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         
         // This is an asynchronous method to retrieve a Device Token
@@ -48,6 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
         return deviceTokenString
     }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]){
+        print(userInfo["aps"])
+        let notifiAlert = UIAlertController(title: "Oops!", message:"This feature isn't available right now", preferredStyle: .Alert)
+        let NotificationMessage : AnyObject? =  userInfo["aps"]!["alert"]
+        notifiAlert.title = "TITLE"
+        notifiAlert.message = NotificationMessage as? String
+        notifiAlert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+
+        self.window?.rootViewController!.presentViewController(notifiAlert, animated: true, completion: nil)
+    }
+
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
         // inspect notificationSettings to see what the user said!
     }

@@ -12,6 +12,7 @@
 		47C914741BEC8D2700D4A052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C914721BEC8D2700D4A052 /* Main.storyboard */; };
 		47C914761BEC8D2700D4A052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C914751BEC8D2700D4A052 /* Assets.xcassets */; };
 		47C914791BEC8D2700D4A052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C914771BEC8D2700D4A052 /* LaunchScreen.storyboard */; };
+		47C914891BECEDA500D4A052 /* sub.caf in Resources */ = {isa = PBXBuildFile; fileRef = 47C914881BECEDA500D4A052 /* sub.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		47C914751BEC8D2700D4A052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47C914781BEC8D2700D4A052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47C9147A1BEC8D2700D4A052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47C914881BECEDA500D4A052 /* sub.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sub.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		47C914621BEC8D2700D4A052 = {
 			isa = PBXGroup;
 			children = (
+				47C914831BECEC9C00D4A052 /* Resources */,
 				47C9146D1BEC8D2700D4A052 /* AirNotifierClient */,
 				47C9146C1BEC8D2700D4A052 /* Products */,
 			);
@@ -61,6 +64,15 @@
 				47C914771BEC8D2700D4A052 /* LaunchScreen.storyboard */,
 				47C9147A1BEC8D2700D4A052 /* Info.plist */,
 			);
+			path = AirNotifierClient;
+			sourceTree = "<group>";
+		};
+		47C914831BECEC9C00D4A052 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47C914881BECEDA500D4A052 /* sub.caf */,
+			);
+			name = Resources;
 			path = AirNotifierClient;
 			sourceTree = "<group>";
 		};
@@ -129,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47C914791BEC8D2700D4A052 /* LaunchScreen.storyboard in Resources */,
+				47C914891BECEDA500D4A052 /* sub.caf in Resources */,
 				47C914761BEC8D2700D4A052 /* Assets.xcassets in Resources */,
 				47C914741BEC8D2700D4A052 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +301,7 @@
 				47C9147F1BEC8D2700D4A052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
