@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		47C914761BEC8D2700D4A052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C914751BEC8D2700D4A052 /* Assets.xcassets */; };
 		47C914791BEC8D2700D4A052 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C914771BEC8D2700D4A052 /* LaunchScreen.storyboard */; };
 		47C914891BECEDA500D4A052 /* sub.caf in Resources */ = {isa = PBXBuildFile; fileRef = 47C914881BECEDA500D4A052 /* sub.caf */; };
+		47C9148C1BECF48000D4A052 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47C9148E1BECF48000D4A052 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,11 @@
 		47C914781BEC8D2700D4A052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47C9147A1BEC8D2700D4A052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47C914881BECEDA500D4A052 /* sub.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sub.caf; sourceTree = "<group>"; };
+		47C9148D1BECF48000D4A052 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		47C9148F1BECF48700D4A052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		47C914901BED98E800D4A052 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		47C914911BED98E800D4A052 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		47C914921BED98E800D4A052 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				47C9146E1BEC8D2700D4A052 /* AppDelegate.swift */,
+				47C9148E1BECF48000D4A052 /* Localizable.strings */,
 				47C914701BEC8D2700D4A052 /* ViewController.swift */,
 				47C914721BEC8D2700D4A052 /* Main.storyboard */,
 				47C914751BEC8D2700D4A052 /* Assets.xcassets */,
@@ -118,12 +125,13 @@
 				};
 			};
 			buildConfigurationList = 47C914661BEC8D2700D4A052 /* Build configuration list for PBXProject "AirNotifierClient" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 47C914621BEC8D2700D4A052;
 			productRefGroup = 47C9146C1BEC8D2700D4A052 /* Products */;
@@ -140,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C9148C1BECF48000D4A052 /* Localizable.strings in Resources */,
 				47C914791BEC8D2700D4A052 /* LaunchScreen.storyboard in Resources */,
 				47C914891BECEDA500D4A052 /* sub.caf in Resources */,
 				47C914761BEC8D2700D4A052 /* Assets.xcassets in Resources */,
@@ -166,6 +175,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				47C914731BEC8D2700D4A052 /* Base */,
+				47C914901BED98E800D4A052 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -174,8 +184,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				47C914781BEC8D2700D4A052 /* Base */,
+				47C914911BED98E800D4A052 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		47C9148E1BECF48000D4A052 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47C9148D1BECF48000D4A052 /* en */,
+				47C9148F1BECF48700D4A052 /* Base */,
+				47C914921BED98E800D4A052 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

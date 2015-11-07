@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  AirNotifierClient
+
+  Created by Dongsheng Cai on 7/11/2015.
+  Copyright © 2015 Dongsheng Cai. All rights reserved.
+*/
+"push.title" = "%@ and %@";
+"push.body" = "Notification: %@ %@";
+"push.button" = "Open app";
